@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState, createContext } from "react";
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Main from "./scenes/Main";
+import Destinations from "./components/Destinations";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-function App() {
+export const DestinationContext = createContext();
+
+export default function App() {
+  const [destinationResults, setDestinationResults] = useState([]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <DestinationContext.Provider
+        value={{ destinationResults, setDestinationResults }}
+      >
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/destinations" element={<Destinations />} />
+        </Routes>
+        <Footer />
+      </DestinationContext.Provider>
     </div>
   );
 }
-
-export default App;
