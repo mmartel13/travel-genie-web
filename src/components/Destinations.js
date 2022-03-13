@@ -12,8 +12,8 @@ export default function GetDestinations() {
       ) : (
         destinationResults.map((destination) => {
           return (
-            <DestinationCard name={destination.destination} image={destination.image} description={destination.description}>
-            <div key={destination.id}>
+            <DestinationCard key={destination.id} id={destination.id} name={destination.destination} image={destination.image} description={destination.description} favorite={destination.favorite}>
+            <div>
               <p>{destination.destination}</p>
               <p>{destination.description}</p>
               <img src={destination.image} style={{width: "400px"}}/>

@@ -1,16 +1,31 @@
-import * as React from 'react';
+import React, { useContext } from 'react';
 import Card from '@mui/material/Card';
-// import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-// import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import "../App.css";
+import { DestinationContext } from '../App';
 
 
 
-export default function DestinationCard({ name, image, description }) {
+export default function DestinationCard({ id, name, image, description, favorite }) {
+  const { setDestinationResults } = useContext(DestinationContext);
+  const handleFavoriteDestination = () => {
+    console.log(favorite, 'clicked')
+    fetch(`https://travel-genie-mm.uk.r.appspot.com/destinations/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body:JSON.stringify({ favorite: !favorite })
+    })
+    .then(res => res.json())
+    .then(() => {
+      setDestinationResults()
+    })
+    .catch(err => console.error(err))
+  }
     return (
       <Card sx={{ maxWidth: 345 }} className="destination-card">
         <CardMedia
@@ -28,7 +43,7 @@ export default function DestinationCard({ name, image, description }) {
           </Typography>
           </CardContent>
           <CardContent>
-          <FavoriteBorderIcon className='favorite-icon'/>
+          <FavoriteBorderIcon onClick={handleFavoriteDestination} className='favorite-icon'/>
         </CardContent>
       </Card>
     );

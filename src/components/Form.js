@@ -39,13 +39,13 @@ export default function Form() {
     })
       .then((res) => res.json())
       .then((data) => setDestinationResults(data))
-      .then(() => navigate('/destinations'))
+      .then(() => navigate("/destinations"))
       .catch((err) => console.error(err));
   };
 
   return (
-    <Box sx={{ maxWidth: 400 }} className="form-container">
-      <form onSubmit={sendFilteredDestinations}>
+    <Box sx={{ maxWidth: 400 }}>
+      <form onSubmit={sendFilteredDestinations} className="form-container">
         <FormControl fullWidth className="form-control">
           <InputLabel id="demo-simple-select-label">Price</InputLabel>
           <Select
@@ -100,8 +100,16 @@ export default function Form() {
             <MenuItem value={"International"}>International</MenuItem>
           </Select>
           <Button
-            sx={{ marginTop: 2 }}
-            variant="outlined"
+            sx={{
+              marginTop: 2,
+              backgroundColor: "black",
+              color: "white",
+              ":hover": {
+                bgcolor: "#3a3a3a",
+                color: "white",
+              },
+            }}
+            variant="contained"
             type="submit"
             disabled={btnDisabled}
             onClick={sendFilteredDestinations}
