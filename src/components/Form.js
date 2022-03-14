@@ -9,13 +9,8 @@ import { useNavigate } from "react-router-dom";
 import { DestinationContext } from "../App";
 
 export default function Form() {
-  const { setDestinationResults } = useContext(DestinationContext);
+  const { setDestinationResults, filteredDestinations, setFilteredDestinations } = useContext(DestinationContext);
   const [btnDisabled, setBtnDisabled] = useState(true);
-  const [filteredDestinations, setFilteredDestinations] = useState({
-    price: "",
-    climate: "",
-    type: "",
-  });
   const navigate = useNavigate();
 
   useEffect(() => {

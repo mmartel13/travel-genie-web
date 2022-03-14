@@ -41,6 +41,18 @@ body {
   margin-top: 0; 
 }
 
+.description-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 23px;
+  text-align: center;
+}
+
+.description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
 .header {
   font: verdana;
   font-size: x-large;
@@ -55,10 +67,6 @@ body {
   left: 0;
   width: 100%;
   text-align: center;
-}
-
-label {
-  display: block;
 }
 
 .main-section {
@@ -90,6 +98,12 @@ label {
 }
 
 .favorite-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.filled-favorite-icon {
   position: absolute;
   bottom: 20px;
   right: 20px;

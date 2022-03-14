@@ -1,12 +1,19 @@
-import { AppBar, Toolbar } from "@material-ui/core";
+import { AppBar, Toolbar, Button } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
+  const handleHomePage = () => {
+    navigate("/");
+  }
+
   const displayDesktop = () => {
     return <Toolbar style={{backgroundColor: 'black', display: "flex", justifyContent: "center" }}>
+      <Button onClick={handleHomePage}>
       <img src='/travel-genie.svg' style={{height: "36px"}} alt='travel genie logo'/>
+      </Button>
       </Toolbar>;
   };
-  
   return (
     <header className="header">
       <AppBar>{displayDesktop()}</AppBar>
