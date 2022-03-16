@@ -28,7 +28,7 @@ export default function Tours() {
           </Typography>
         </CardContent>
         <CardActions sx={{ position: "absolute", bottom: 0, right: 0 }}>
-          <Button size="small">Learn More</Button>
+          <Button size="small" href="https://alaskatours.com/day-tours/helicopter-flightseeing-glacier-landing/">Learn More</Button>
         </CardActions>
       </Card>
       <Card sx={{ maxWidth: 345, position: "relative" }}>
@@ -50,7 +50,7 @@ export default function Tours() {
           </Typography>
         </CardContent>
         <CardActions sx={{ position: "absolute", bottom: 0, right: 0 }}>
-          <Button size="small">Learn More</Button>
+          <Button size="small" href="https://www.yellowstonepark.com/things-to-do/geysers-hot-springs/grand-prismatic-midway-geyser-basin/">Learn More</Button>
         </CardActions>
       </Card>
       <Card sx={{ maxWidth: 345, position: "relative" }}>
@@ -71,7 +71,7 @@ export default function Tours() {
           </Typography>
         </CardContent>
         <CardActions sx={{ position: "absolute", bottom: 0, right: 0 }}>
-          <Button size="small">Learn More</Button>
+          <Button size="small" href="https://mauiwhalewatching.com/#whale-season">Learn More</Button>
         </CardActions>
       </Card>
     </div>
