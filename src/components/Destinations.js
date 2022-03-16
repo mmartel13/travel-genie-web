@@ -6,7 +6,7 @@ import { DestinationContext } from '../App'
 export default function GetDestinations() {
   const { destinationResults } = useContext(DestinationContext);
     return (
-    <section className="main-section">
+    <section className="destination-results">
       {!destinationResults ? (
         <h2>Loading...</h2>
       ) : (

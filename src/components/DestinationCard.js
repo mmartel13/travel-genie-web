@@ -68,7 +68,6 @@ export default function DestinationCard({
             onClick={handleFavoriteDestination}
             className="favorite-icon"
           />
-        
         }
       </CardContent>
     </Card>

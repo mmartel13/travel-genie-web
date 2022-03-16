@@ -8,9 +8,9 @@ export default function Header() {
   }
 
   const displayDesktop = () => {
-    return <Toolbar style={{backgroundColor: 'black', display: "flex", justifyContent: "center" }}>
+    return <Toolbar style={{backgroundColor: 'black', justifyContent: "center" }}>
       <Button onClick={handleHomePage}>
-      <img src='/travel-genie.svg' style={{height: "36px"}} alt='travel genie logo'/>
+      <img src='/assets/travel-genie.svg' style={{height: "36px"}} alt='travel genie logo'/>
       </Button>
       </Toolbar>;
   };
