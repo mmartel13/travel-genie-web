@@ -1,0 +1,7 @@
+.destination-results {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 80px;
+  }

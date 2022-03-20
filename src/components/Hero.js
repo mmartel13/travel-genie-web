@@ -1,5 +1,6 @@
 import Form from "./Form";
 import Tours from './Tours';
+import "./Hero.css"
 
 export default function Hero() {
   return (

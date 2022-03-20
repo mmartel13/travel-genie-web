@@ -7,6 +7,8 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import "../App.css";
 import { DestinationContext } from "../App";
+import "./DestinationCard.css"
+
 
 export default function DestinationCard({
   id,

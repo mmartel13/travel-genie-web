@@ -1,0 +1,21 @@
+.card-details {
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+  }
+  
+  .destination-card {
+    position: relative;
+  }
+  
+  .favorite-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .filled-favorite-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }

@@ -1,0 +1,71 @@
+.hero {
+    display: flex;
+    min-height: 70vh;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 60px 40px;
+    align-items: center;
+    background-image: url('../../public/assets/HeroImage.jpg'), linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+  }
+  
+  .hero-copy {
+    color: white;
+  }
+  
+  .hero-copy h2 {
+    font-size: 46px;
+  }
+  
+  .hero-copy p {
+    font-size: 24px;
+  }
+  
+  .hero-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+  }
+  
+  .hero-form h2 {
+    margin-top: 0; 
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .submit-form {
+    margin-top: 10px;
+  } 
+
+  .section-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .about-container {
+    background-color: #f7f7fc;
+    padding: 60px 30px;
+  }
+
+  .about, .suggested-tours {
+    font-family: 'Roboto', sans-serif;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .about p, .suggested-tours p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
